@@ -43,10 +43,14 @@
 <?php
 if (isset($_POST['answer'])) {
     if ($_POST['answer'] == "волейбол") {
-        setcookie("ex6", "true");
-        header("Location: ".$_SERVER["REQUEST_URI"]);
+//        setcookie("ex6", "true");
+////        header("Location: ".$_SERVER["REQUEST_URI"]);
+//        header("Location: ./");
+        echo "<script>document.cookie='ex6=true'; alert('Правильно!');  document.location.replace('./');</script>";
     } else {
-        echo "Невірно";
+//        setcookie("ex6", "false");
+//        header("Location: ./");
+        echo "<script>document.cookie='ex6=false'; alert('Невірно!');  document.location.replace('./');</script>";
     }
 }
 if(isset($_COOKIE['ex6'])) {

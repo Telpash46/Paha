@@ -19,7 +19,11 @@
         color:red;
         font-weight:bold;
     }
+    button {
+        pointer:pointer;
+    }
 </style>
+
 <?php
 
 $numbers=['🤪','😝','🤑','🤗','😇','🤗','🤭','🐮','🐂','🐐','🐫','🐫','🦙','🐖','🧀','🥐','🥦','🥔','🥕','🌽','🗽','🏪','🏡','🧱','🌍','🌎','🌏','🏭','🏦','🌚','🌛','🌜','🌌','🌨','☂️','🌩','🌞','👍',
@@ -87,7 +91,7 @@ shuffle($numbers);
 
             alert("Номер нашої гімназії 46❤️");
             document.cookie="ex2=1";
-            document.location.replace(document.location);
+            document.location.replace("./");
         }
     })
 
@@ -95,5 +99,7 @@ shuffle($numbers);
 </script>
 <?php
 if(isset($_COOKIE['ex2'])) {
+    echo "<script>document.cookie='ex2=true'; document.location.replace('./');</script>";
     echo "Працює!";
+    header("Location: ./");
 }

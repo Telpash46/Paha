@@ -21,10 +21,14 @@
 <?php
 if (isset($_POST['answer'])) {
     if ($_POST['answer'] == "1937") {
-        setcookie("ex7", "true");
-        header("Location: ".$_SERVER["REQUEST_URI"]);
+//        setcookie("ex7", "true");
+////        header("Location: ".$_SERVER["REQUEST_URI"]);
+//        header("Location: ./");
+        echo "<script>document.cookie='ex7=true'; alert('Правильно!');  document.location.replace('./');</script>";
     } else {
-        echo "Невірно";
+//        setcookie("ex7", "false");
+//        header("Location: ./");
+        echo "<script>document.cookie='ex7=false'; alert('Невірно!');  document.location.replace('./');</script>";
     }
 }
 if(isset($_COOKIE['ex7'])) {

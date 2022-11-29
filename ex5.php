@@ -22,10 +22,14 @@
 <?php
 if (isset($_POST['answer'])) {
     if ($_POST['answer'] == "Гармонія") {
-        setcookie("ex5", "true");
-        header("Location: ".$_SERVER["REQUEST_URI"]);
+//        setcookie("ex5", "true");
+////        header("Location: ".$_SERVER["REQUEST_URI"]);
+//        header("Location: ./");
+        echo "<script>document.cookie='ex5=true'; alert('Правильно!');  document.location.replace('./');</script>";
     } else {
-        echo "Невірно";
+//        setcookie("ex5", "false");
+//        header("Location: ./");
+        echo "<script>document.cookie='ex5=false'; alert('Невірно!');  document.location.replace('./');</script>";
     }
 }
 if(isset($_COOKIE['ex5'])) {

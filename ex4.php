@@ -72,27 +72,31 @@
                  Суспільно-економічний
             </label>
         </div>
-
+<input type="text" hidden name="ex4" value="passed">
 <br>
 
 
         <button type="submit" class="btn btn-success">Відповісти</button>
     </fieldset>
 </form>
-
+</body>
 <?php
-if (isset($_POST)) {
-       if (isset($_POST['3']) and isset($_POST['6']) and isset($_POST['8']) and isset($_POST['9'])) {
-           setcookie("ex4", "true");
-           header("Location: ".$_SERVER["REQUEST_URI"]);
-       } else {
-           echo "<div class='nevirno'>Невірно / Не вказано</div>";
-       }
+
+if (isset($_POST['ex4'])) {
+    if (isset($_POST['3']) and isset($_POST['6']) and isset($_POST['8']) and isset($_POST['9'])) {
+        echo "<script>document.cookie='ex4=true'; alert('Правильно!'); document.location.replace('./');</script>";
+ //       setcookie("ex4", "true");
+     //      header("Location: ".$_SERVER["REQUEST_URI"]);
+    } else {
+//        //echo "<div class='nevirno'>Невірно / Не вказано</div>";
+//        setcookie("ex4", "false");
+        echo "<script>document.cookie='ex4=false'; alert('Невірно!');  document.location.replace('./');</script>";
+    }
+   //header("Location: ./");
 }
-if(isset($_COOKIE['ex4'])) {
-    echo "<style> .nevirno {display:none;}</style>Працює!";
-}
+//if(isset($_COOKIE['ex4'])) {
+//    echo "<style> .nevirno {display:none;}</style>Працює!";
+//}
 
 
 ?>
-</body>

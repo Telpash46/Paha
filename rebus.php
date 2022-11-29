@@ -43,9 +43,15 @@
 <?php
 if (isset($_POST['answer'])) {
     if (mb_strtolower($_POST['answer']) == "золотий запас") {
-        setcookie("ex8", "true");
-
-        header("Location: ".$_SERVER["REQUEST_URI"]);
+//        setcookie("ex8", "true");
+//
+////        header("Location: ".$_SERVER["REQUEST_URI"]);
+//        header("Location: ./");
+        echo "<script>document.cookie='ex8=true'; alert('Правильно!');  document.location.replace('./');</script>";
+    }else {
+//        setcookie("ex8", "false");
+//        header("Location: ./");
+        echo "<script>document.cookie='ex8=false'; alert('Невірно!');  document.location.replace('./');</script>";
     }
 }
 if(isset($_COOKIE['ex8'])) {
