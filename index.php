@@ -20,29 +20,36 @@ echo "Тобі тут потрібно вибрати номер нашої гі
 }
 if (!isset($_COOKIE['ex3']) and isset($_COOKIE['ex2'])) {
 
-    include "ex3.php";
+//    include "ex3.php";
+    include "ex4.php";
 }
 if (!isset($_COOKIE['ex4']) and isset($_COOKIE['ex3'])) {
 
-    include "ex4.php";
+//    include "ex4.php";
+    include "ex5.php";
 }
 if (!isset($_COOKIE['ex5']) and isset($_COOKIE['ex4'])) {
 
-    include "ex5.php";
+//    include "ex5.php";
+    include "ex6.php";
 }
 if (!isset($_COOKIE['ex6']) and isset($_COOKIE['ex5'])) {
 
-    include "ex6.php";
+//    include "ex6.php";
+    include "ex7.php";
 }
 if (!isset($_COOKIE['ex7']) and isset($_COOKIE['ex6'])) {
 
-    include "ex7.php";
+//    include "ex7.php";
+    include "rebus.php";
 }
 if (!isset($_COOKIE['ex8']) and isset($_COOKIE['ex7'])) {
 
-    include "rebus.php";
-}
-if (!isset($_COOKIE['final']) and isset($_COOKIE['ex8'])) {
+//    include "rebus.php";
     echo '<script>alert("Ти успішно пройшов квест!");</script>';
     include "final.php";
 }
+//if (!isset($_COOKIE['final']) and isset($_COOKIE['ex8'])) {
+//    echo '<script>alert("Ти успішно пройшов квест!");</script>';
+//    include "final.php";
+//}
